@@ -1,0 +1,90 @@
+body {
+  background: linear-gradient(135deg, #b3e5fc, #ffffff);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.app-title {
+  color: #0077b6;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  border: none;
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+input,
+button {
+  border-radius: 0.6rem !important;
+  transition: 0.3s ease-in-out;
+}
+
+input:focus {
+  box-shadow: 0 0 6px rgba(0, 119, 182, 0.4);
+  border-color: #0077b6;
+}
+
+#todoForm button:hover {
+  background-color: #0288d1;
+  color: white;
+  transform: scale(1.02);
+}
+
+.list-group-item {
+  border: none;
+  border-radius: 0.6rem;
+  background-color: #f1f8ff;
+  margin-bottom: 10px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s ease;
+}
+
+.list-group-item:hover {
+  background-color: #dbeeff;
+  cursor: pointer;
+}
+
+.badge {
+  font-size: 0.8rem;
+  padding: 0.4em 0.7em;
+  border-radius: 1rem;
+  font-weight: 600;
+}
+
+#pagination .page-item .page-link {
+  border-radius: 0.6rem;
+  margin: 0 4px;
+  color: #0077b6;
+}
+
+#pagination .page-item.active .page-link {
+  background-color: #0077b6;
+  border-color: #0077b6;
+  font-weight: bold;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  #todoForm {
+    flex-direction: column;
+  }
+
+  #todoForm input,
+  #todoForm button {
+    width: 100%;
+  }
+}
