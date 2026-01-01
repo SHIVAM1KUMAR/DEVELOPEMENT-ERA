@@ -1,0 +1,34 @@
+import mongoose from "mongoose";
+
+const userSchema = new mongoose.Schema(
+  {
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+      lowercase: true,
+      trim: true,
+    },
+
+    password: {
+      type: String,
+      default: null, // set after OTP verification
+    },
+
+    isVerified: {
+      type: Boolean,
+      default: false,
+    },
+
+    otp: {
+      type: String,
+    },
+
+    otpExpires: {
+      type: Date,
+    },
+  },
+  { timestamps: true }
+);
+
+export default mongoose.model("User", userSchema);
