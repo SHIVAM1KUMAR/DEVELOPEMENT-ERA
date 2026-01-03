@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js"; // your MongoDB connection
-import authRoutes from "./routes/authRoutes.js";
+import authRoutes from "./Routes/authRoutes.js";
 import errorHandler from "./middleware/errorMiddleware.js";
 
 dotenv.config(); // load .env variables
